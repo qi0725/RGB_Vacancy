@@ -8,7 +8,7 @@ const MemberData=
     },
 
     {
-        Photo:"#",
+        Photo:"./images/profile/gladys.png",
         PhotoAlt:"Gladys Profile Picture",
         Name:"Gladys Yen Qin KHOO",
         StudentId:"105815607",
