@@ -1,0 +1,1311 @@
+/*
+===============================================
+DBI211 Assignment 2 - CSS Stylesheet
+===============================================
+TABLE OF CONTENTS:
+1. Base & Reset
+2. Header & Logo
+3. Navigation
+4. Authentication (Guest & User View)
+5. Search Bar Section
+6. Job Category Navigation
+7. Company & Job Listings
+8. Login Page
+9. Registration Page
+10.Feedback Page
+11.Carrer Page
+12.User Profile Page
+13.About Us Page
+14. Footer
+15. Assignment Specifics (Intro & Disclaimer)
+16. Media Queries (Responsive Design)
+===============================================
+*/
+
+/*
+===============================================
+1. Base & Reset
+===============================================
+*/
+
+* , *::before , *::after
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+===============================================
+2. Header & Logo
+===============================================
+*/
+
+.header-contains
+{
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+}
+
+.logo-area
+{
+    display: flex;
+    text-align: left;
+    border-right: 2px solid #eee;
+    flex-shrink: 0;
+}
+
+.logo-img
+{
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 50px;
+    padding-right: 30px;
+}
+
+/*
+===============================================
+3. Navigation
+===============================================
+*/
+.main-nav
+{
+    display: flex;
+    padding-left: 50px;
+}
+
+.main-nav ul
+{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav ul li a
+{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.main-nav ul li a:hover
+{
+    color: blue;
+}
+
+/* Active Navigation States */
+#page-home .nav-home,
+#page-job .nav-job,
+#page-feedback .nav-feedback,
+#page-compass .nav-compass
+{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border: 1px solid #4a26ff;
+    background-color: #4a26ff;
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+
+/*
+===============================================
+4. Authentication (Guest & User View)
+===============================================
+*/
+
+.authorize-container
+{
+    margin-left: auto;
+}
+
+/* Guest View */
+.guest-view
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guest-view a
+{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.guest-view a:hover
+{
+    color: blue;
+}
+
+.header-btn-login
+{
+    border: 2px solid blue;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: blue !important;
+}
+
+.header-btn-login:hover
+{
+    background-color: blue;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+/* User View */
+.user-view
+{
+    display: none;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-wel-text
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.user-container > icon-text
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.user-icon
+{
+    display: block;
+    width: 48px;
+    height: 48px;
+    border: 4px solid black;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-icon::before
+{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.user-icon::after
+{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    width: 36px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.user-icon:hover
+{
+    border-color: blue;
+}
+
+.user-icon:hover::before , .user-icon:hover::after
+{
+    background-color: blue;
+}
+
+
+.user-icon , .user-icon::before , .user-icon::after
+{
+    transition: all 0.3s ease;
+}
+
+.header-btn-logout
+{
+    border: 1px solid #ddd;
+    background-color: transparent;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #7b61fa;
+    transition: all 0.3s ease;
+}
+
+.header-btn-logout:hover
+{
+    color: white;
+    background-color: red;
+}
+
+/*
+===============================================
+5. Search Bar Section
+===============================================
+*/
+
+.searchbar-area
+{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #4a26ff 44%, #9580ff 100%);
+    padding: 80px 150px;
+}
+
+.searchbar-content
+{
+    max-width: 850px;
+    width: 100%;
+    text-align: center;
+}
+
+.searchbar-content > h1
+{
+    color: white;
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.search-form
+{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px 8px 8px 20px;
+}
+
+.search-icon
+{
+    width: 22px;
+    height: 22px;
+    color: #aaa;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.search-input
+{
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.search-btn
+{
+    background-color: #9580ff;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.search-btn:hover
+{
+    background-color: #7b61fa;
+}
+
+/*
+===============================================
+6. Job Category Navigation
+===============================================
+*/
+.main-job-nav
+{
+    margin-top: 50px;
+}
+
+.main-job-nav ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    list-style: none;
+    margin: 0;
+    padding: 15px 20px;
+    gap: 50px;
+    scrollbar-width: none;
+}
+
+.main-job-nav ul li a , .job-job-nav ul li a
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+    padding: 12px 50px;
+    font-size: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.main-job-nav ul li a img , .job-job-nav ul li a img
+{
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+    color:transparent;
+    align-content: center;
+}
+
+.main-job-nav ul li a:hover
+{
+    color: white;
+    background-color: #7b61fa;
+    transform: translateY(-3px);
+}
+
+
+.job-job-nav-contains
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1500px;
+}
+
+.job-job-nav
+{
+    flex-shrink: 0;
+    background-color: white;
+    padding: 20px;
+}
+
+.job-job-nav > h5
+{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    margin-top:40px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.job-job-nav ul
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.job-job-nav ul li a:hover
+{
+    color: #7b61fa;
+    background-color: #f0f0f0;
+}
+
+.job-job-nav ul li a
+{
+    border: none;
+    justify-content: normal;
+}
+
+
+/*
+===============================================
+7. Company & Job Listings
+===============================================
+*/
+
+.recommended-contains
+{
+    border: none;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.recommended-contains > legend
+{
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Company Card */
+.company-card
+{
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 1800px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.company-card:hover
+{
+    transform: translateX(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.company-logo
+{
+    height: 200px;
+    width: 200px;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.company-info
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name
+{
+    font-size: 32px;
+}
+
+.company-description
+{
+    font-size: 15px;
+}
+
+/* Job Items */
+.job-section
+{
+    margin-top: 30px;
+}
+
+.section-title
+{
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.job-item
+{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 0 -15px;
+    border-radius: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.job-item:last-child
+{
+    border-bottom: none;
+}
+
+.job-item:hover
+{
+    background-color: #7b61fa;
+    transform: translateY(-2px);
+    border-bottom-color: transparent;
+}
+
+.job-main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.job-title
+{
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+}
+
+.job-meta
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/*To let the each have 3 grid*/
+.job-list
+{
+    display: grid;
+
+    /*Let each grid auto size to max-content*/
+    grid-template-columns: max-content max-content auto;
+    text-decoration: none;
+    column-gap: 15px;
+}
+
+
+.job-item , .job-main , .job-meta
+{
+    display: grid;
+
+    /*Merge into 1 grid*/
+    grid-column: 1 / -1;
+
+    /*Make same amount of grid from the start*/
+    grid-template-columns: subgrid;
+}
+
+.job-title
+{
+    /*Merge into 1 grid (Title is 1 column)*/
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+}
+
+.job-meta span
+{
+    display: inline-block;
+    justify-self: start;
+    align-self: center;
+}
+
+/* Badges */
+.badge
+{
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.badge-department
+{
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.badge-salary
+{
+    background-color: #e8fff0;
+    color: #059669;
+}
+
+.job-type-badge
+{
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    color: black;
+    background: white;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.job-type-full
+{
+    border-color: #4a26ff;
+    color: #4a26ff;
+}
+
+/*
+===============================================
+8. Login Page
+===============================================
+*/
+.page-login .guest-view
+{
+    display: none;
+}
+.login-contains
+{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.left-login
+{
+    width: 50%;
+    border-right: 3px solid #eaeaea;
+}
+
+.right-login
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-employee
+{
+    width: 80%;
+    max-width: 450px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.login-employee p
+{
+    margin: 0;
+}
+
+.login-employee a
+{
+    color: #4a26ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-card
+{
+    width: 80%;
+    max-width: 450px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 16px;
+    border: 2px solid #eaeaea
+}
+
+.login-card > h2
+{
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-card form
+{
+    width: 100%;
+}
+
+.input-group
+{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label
+{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.input-group input
+{
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+.input-group input:focus
+{
+    border-color: #4a26ff;
+}
+
+.forget-password {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forget-password a
+{
+    color: #4a26ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forget-password a:hover
+{
+    text-decoration: underline;
+}
+
+.login-btn-login
+{
+    width: 100%;
+    border: 2px solid #7b61fa;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    background-color: #7b61fa;
+    transition: all 0.3s ease;
+}
+
+.login-btn-login:hover
+{
+    transform: translateY(-2px);
+}
+
+
+.goto-register
+{
+    margin: 20px auto 0 auto;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+}
+
+.goto-register a
+{
+    border: 2px solid #7b61fa;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.goto-register a:hover
+{
+    color: white;
+    background-color: #7b61fa;
+}
+
+
+/*
+===============================================
+13.About Us Page
+===============================================
+*/
+
+.page-about
+{
+    text-align: center;
+}
+
+.about-title
+{
+    margin-top: 40px;
+    font-size:42px;
+    font-weight:bold;
+    color: #6c5ce7;
+}
+
+.about-card{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card
+{
+    width: 270px;
+    padding: 25px;
+    border-radius: 20px;
+    border:1px solid black;
+    border-top:5px solid #6c5ce7;
+    transition:all 0.3s ease;
+}
+
+.card:hover
+{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-img
+{
+    display:inline-block;
+    font-size: 12px;
+    align-content: center;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border:3px solid black;
+}
+
+.card-btn
+{
+    background-color:#9580ff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-btn:hover
+{
+    background-color: #7b61fa;
+}
+
+.about-popup-contains
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.about-popup-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.about-popup-img
+{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid #6c5ce7;
+}
+
+.close-btn
+{
+    float: right;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+
+
+
+
+
+/*
+===============================================
+14.Footer (Using Table)
+===============================================
+*/
+
+.footer-contains
+{
+    background-color: #1a1a2e;
+    color: #eee;
+    padding: 40px 20px 40px 20px
+}
+
+.footer-table
+{
+    width: 100%;
+    max-width: 1000px;
+    margin:0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.footer-table th
+{
+    text-align: left;
+    color: white;
+    font-size: 18px;
+    width: 33.33%;
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+.footer-table td
+{
+    width: 33.33%;
+    padding:20px;
+    vertical-align: top;
+}
+.footer-table p
+{
+    margin: 0 0 10px 0;
+    color: #aaa;
+    font-size: 15px;
+}
+
+.footer-links ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li
+{
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a
+{
+    color: #aaa;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover
+{
+    color: #9580ff;
+}
+
+.footer-bottom-cell
+{
+    border-top: 1px solid #555;
+    padding: 20px 0;
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer-contact a
+{
+    text-decoration: none;
+}
+
+/*
+===============================================
+15.Assignment Specifics (Intro & Disclaimer)
+===============================================
+*/
+
+.assignment-intro-section , .assignment-disclaimer-contains
+{
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    background-color: #1a1a2e;
+    border-top:1px solid #555;
+}
+
+.intro-box
+{
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+}
+
+.intro-box > h2
+{
+    margin-top: 0;
+}
+
+.published-url
+{
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f0f4ff;
+    border: 1px solid #7b61fa;
+    border-radius: 8px;
+}
+
+.published-url a
+{
+    font-weight: bold;
+    color: #7b61fa;
+    text-decoration: none;
+}
+
+/* To clear Border */
+.assignment-disclaimer-contains
+{
+    border-top:none;
+}
+
+.assignment-disclaimer
+{
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+}
+
+.assignment-disclaimer > p
+{
+    font-style: italic;
+}
+
+/*
+===============================================
+16.Media Queries (Responsive Design)
+===============================================
+*/
+@media screen and (max-width: 850px)
+{
+    /* Header Responsive */
+    .header-contains
+    {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .logo-area
+    {
+        border-right: none;
+        border-bottom: 2px solid #eee;
+        padding-right: 0;
+        padding-bottom: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo-img
+    {
+        padding-right: 0;
+        margin-right: 0;
+    }
+    
+    .main-nav
+    {
+        padding-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .main-nav ul
+    {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+
+    .authorize-container
+    {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Search Bar Responsive */
+    .searchbar-area
+    {
+        padding: 40px 15px;
+    }
+
+    .searchbar-content > h1
+    {
+        font-size: 26px;
+    }
+
+    .search-form
+    {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .search-icon
+    {
+        display: none;
+    }
+
+    .search-input
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search-btn
+    {
+        width: 100%;
+    }
+
+    .main-job-nav ul
+    {
+        justify-content: flex-start;
+    }
+
+    .job-job-nav-contains
+    {
+        flex-direction: column;
+        gap:10px;
+    }
+
+    .job-job-nav
+    {
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .job-job-nav ul
+    {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-right:50px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        gap: 10px;
+    }
+
+    /* Company & Jobs Responsive */
+    .recommended-contains
+    {
+        margin-top:0 !important;
+    }
+
+    .company-card
+    {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .company-logo
+    {
+        width: 100px;
+        height: 100px;
+    }
+
+    .job-section
+    {
+        text-align: left;
+        width: 100%;
+    }
+
+    .job-list, .job-item, .job-main, .job-meta
+    {
+        display: flex;
+        grid-template-columns: none;
+    }
+
+    .job-item
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .job-meta
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+
+    .job-type-badge
+    {
+        align-self: flex-start;
+    }
+
+    /*Login Responsive*/
+    .login-contains
+    {
+        flex-direction: column;
+    }
+
+    .left-login
+    {
+        display: none;
+    }
+
+    .right-login
+    {
+        width: 100%;
+    }
+
+    .login-card
+    {
+        width: 90%;
+        padding: 20px;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .page-login .main-nav , .page-login .authorize-container
+    {
+        display: none;
+    }
+
+    .page-login .header-contains
+    {
+        border: none;
+    }
+
+    /*About Us Page*/
+    .about-card
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card
+    {
+        width: 90%;
+    }
+}
