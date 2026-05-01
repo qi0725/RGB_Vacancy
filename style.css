@@ -866,12 +866,21 @@ img
     border:1px solid black;
     border-top:5px solid #6c5ce7;
     transition:all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card:hover
 {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card p {
+    margin-top: auto;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .card-img
@@ -921,12 +930,13 @@ img
     border-radius: 15px;
     width: 300px;
     text-align: center;
+    position: relative;
 }
 
 .about-popup-img
 {
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -935,9 +945,17 @@ img
 
 .close-btn
 {
-    float: right;
-    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
     font-size: 40px;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover
+{
+    color: red;
 }
 
 /*
