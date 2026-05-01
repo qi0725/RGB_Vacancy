@@ -837,9 +837,10 @@ img
 ===============================================
 */
 
-.page-about
+.about-contains
 {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .about-title
@@ -938,11 +939,6 @@ img
     cursor: pointer;
     font-size: 40px;
 }
-
-
-
-
-
 
 /*
 ===============================================
