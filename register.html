@@ -1,0 +1,179 @@
+<!--
+Group RGB Vacancy
+Date: 29/04/2026
+Validated: 01/05/2026 Ok
+Description: DBI211 Group Assignment Register Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - Register Page </title>
+    </head>
+
+    <body class="page-register">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <article class="register-contains">
+            <div class="left-register">
+                <div class="register-card">
+                    <h2>Register an Account</h2>
+                    <form name="register" action="#" method="post" enctype="text/plain">
+                        <div class="input-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" maxlength="24" placeholder="Please Enter Your Username">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Please Enter Your Email">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Please Enter Your Password" maxlength="18">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="re-password">Re-enter Your Password</label>
+                            <input type="password" id="re-password" placeholder="Please Re-Enter Your Password" maxlength="18">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="01234567890" minlength="10" maxlength="11">
+                        </div>
+
+                        <div class="select-group">
+                            <label for="state">State</label>
+                            <select id="state" required>
+                                <option value="" disabled selected>Please select a state...</option>
+                                <option value="Johor">Johor</option>
+                                <option value="Kedah">Kedah</option>
+                                <option value="Kelantan">Kelantan</option>
+                                <option value="Melaka">Melaka</option>
+                                <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                <option value="Pahang">Pahang</option>
+                                <option value="Perak">Perak</option>
+                                <option value="Perlis">Perlis</option>
+                                <option value="Pulau Pinang">Pulau Pinang</option>
+                                <option value="Sabah">Sabah</option>
+                                <option value="Sarawak">Sarawak</option>
+                                <option value="Selangor">Selangor</option>
+                                <option value="Terengganu">Terengganu</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" placeholder="Please Enter Your City">
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="postcode">Postcode</label>
+                            <input type="text" id="postcode" pattern="{5}" maxlength="5" placeholder="Please Enter Your Postcode(12345)">
+                        </div>
+                        <button type="submit" class="register-btn-register">Register</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="right-register">
+                <img src="./images/background/login-register_background.png" alt="Register background">
+            </div>
+        </article>
+        
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>Connecting brilliant talents with top companies. Your journey to a dream job starts right here.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 5 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+
+        <script src="./js/verify_login_register.js"></script>
+        <script src="./js/login_status.js"></script>
+
+    </body>
+</html>
