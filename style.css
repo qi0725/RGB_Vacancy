@@ -17,7 +17,7 @@ TABLE OF CONTENTS:
 6. Job Category Navigation
 7. Company & Job Listings
 8. Login & Register Page
-9. Feedback Page
+9. Feedback & ThanksPage
 10. Carrer Page
 11. User Profile Page
 12. About Us Page
@@ -858,7 +858,7 @@ img
 
 /*
 ===============================================
-9. Feedback Page
+9. Feedback & Thanks Page
 ===============================================
 */
 .feedback-contains
@@ -994,6 +994,69 @@ img
     color: white;
     transform: translateY(-2px);
 }
+
+.thanks-contains
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 65px;
+    padding: 40px 20px;
+}
+
+.thanks-card
+{
+    background-color: white;
+    max-width: 600px;
+    width: 100%;
+    padding: 60px 40px;
+    border-radius: 20px;
+    border: 1px solid #eaeaea;
+    text-align: center;
+}
+
+.thanks-icon {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.thanks-card h1
+{
+    color: #4a26ff;
+    font-size: 40px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.thanks-card p
+{
+    color: #555;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.thanks-btn
+{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #7b61fa;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.thanks-btn:hover
+{
+    background-color: #4a26ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(74, 38, 255, 0.4);
+}
+
 
 /*
 ===============================================
