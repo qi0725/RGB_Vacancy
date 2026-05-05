@@ -1,0 +1,116 @@
+<!--
+Group RGB Vacancy
+Date: 05/05/2026
+Validated: 06/05/2026 Ok
+Description: DBI211 Group Assignment Career Compass Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - Career Compass</title>
+    </head>
+
+    
+
+    <body class="page-compass">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div>
+            <h1>In Progressing...</h1>
+        </div>
+        
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>Connecting brilliant talents with top companies. Your journey to a dream job starts right here.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 5 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+
+        <script src="./js/login_status.js"></script>
+        <script src="./js/company.js"></script>
+    </body>
+</html>
