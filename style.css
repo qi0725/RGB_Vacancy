@@ -18,9 +18,9 @@ TABLE OF CONTENTS:
 7. Company & Job Listings
 8. Login & Register Page
 9. Feedback Page
-10.Carrer Page
-11.User Profile Page
-12.About Us Page
+10. Carrer Page
+11. User Profile Page
+12. About Us Page
 13. Footer
 14. Assignment Specifics (Intro & Disclaimer)
 15. Media Queries (Responsive Design)
@@ -48,6 +48,14 @@ img
 {
     max-width: 100%;
     height: auto;
+}
+
+
+.page-login .guest-view ,
+.page-register .guest-view ,
+.page-user .user-view
+{
+    display: none ! important;
 }
 
 /*
@@ -676,11 +684,6 @@ img
 ===============================================
 */
 
-.page-login .guest-view , .page-register .guest-view
-{
-    display: none;
-}
-
 .login-contains , .register-contains
 {
     display: flex;
@@ -992,10 +995,22 @@ img
     transform: translateY(-2px);
 }
 
+/*
+===============================================
+10. Career Page
+===============================================
+*/
 
 /*
 ===============================================
-12.About Us Page
+11. User Profile Page
+===============================================
+*/
+
+
+/*
+===============================================
+12. About Us Page
 ===============================================
 */
 
@@ -1122,7 +1137,7 @@ img
 
 /*
 ===============================================
-13.Footer (Using Table)
+13. Footer (Using Table)
 ===============================================
 */
 
@@ -1206,7 +1221,7 @@ img
 
 /*
 ===============================================
-14.Assignment Specifics (Intro & Disclaimer)
+14. Assignment Specifics (Intro & Disclaimer)
 ===============================================
 */
 
@@ -1276,7 +1291,7 @@ img
 
 /*
 ===============================================
-15.Media Queries (Fluid Design)
+15. Media Queries (Fluid Design)
 ===============================================
 */
 @media screen and (max-width: 850px)
