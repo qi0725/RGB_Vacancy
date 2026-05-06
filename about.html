@@ -1,0 +1,131 @@
+<!--
+Group RGB Vacancy
+Date: 01/05/2026
+Validated: 01/05/2026 Ok
+Description: DBI211 Group Assignment About Us Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - About RGB </title>
+    </head>
+
+    <body class="page-about">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <article class="about-contains">
+            <h1 class="about-title">About Us</h1>
+
+            <div class="about-card">
+                <!--Java Script (about_us.js)-->
+            </div>
+
+            <div class="about-popup-contains">
+                <div class="about-popup-card">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    
+                    <img src="#" alt=" " class="about-popup-img">
+
+                    <h2 class="about-popup-name">Amonous</h2>
+
+                    <p class="about-popup-id">Secret</p>
+                </div>
+            </div>
+        </article>
+
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>Connecting brilliant talents with top companies. Your journey to a dream job starts right here.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 5 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+
+        <script src="./js/login_status.js"></script>
+        <script src="./js/about_us.js"></script>
+    </body>
+</html>
+
