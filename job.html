@@ -1,0 +1,184 @@
+<!--
+Group RGB Vacancy
+Date: 30/04/2026
+Validated: 19/05/2026 Ok
+Description: DBI211 Group Assignment Job Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - Find  a Job</title>
+    </head>
+
+    <body class="page-job">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="searchbar-area">
+            <div class="searchbar-content">
+                <search>
+                    <form action="#" class="search-form">
+
+                        <!-- search icon using svg -->
+                        <label for="search-input">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </label>
+
+                        <input type="search" placeholder="Search Company" class="search-input" id="search-input" required>
+                        <button type="submit" class="search-btn">Search</button>
+                    </form>
+                </search>
+            </div>
+        </div>
+
+        <div class="job-job-nav-contains">
+            <aside class="job-job-nav">
+
+                <h1>Hot Selector</h1>
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./images/Job/sales.png" alt="Sales-icon">
+                            <span>Sales Assistant</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./images/Job/teacher.png" alt="Teacher-icon">
+                            <span>Teacher</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./images/Job/accountant.png" alt="Accountant-icon">
+                            <span>Accountant</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./images/Job/chef.png" alt="Chef-icon">
+                            <span>Chef</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="./images/Job/waiters.png" alt="Waiters-icon">
+                            <span>Waiters</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <article class="job-card-contains">
+                <fieldset class="recommended-contains">
+                    <legend><h2>Find Your Next Employer</h2></legend>
+
+                    <div class="company-list">
+                        <!--Java Script (company.js)-->
+                    </div>
+                </fieldset>
+            </article>
+        </div>
+
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>Connecting brilliant talents with top companies. Your journey to a dream job starts right here.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 19 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+
+        <script src="./js/login_status.js"></script>
+        <script src="./js/company.js"></script>
+    </body>
+</html>

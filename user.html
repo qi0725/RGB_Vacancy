@@ -1,0 +1,207 @@
+<!--
+Group RGB Vacancy
+Date: 05/05/2026
+Validated: 06/05/2026 Ok
+Description: DBI211 Group Assignment Career User Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - User</title>
+    </head>
+
+    <body class="page-user">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <article class="user-contains">
+            <div class="personal-information-contains">
+                <h1>Personal Information</h1>
+                
+                <div class="info-list">
+                    <div class="info-row">
+                        <div class="info-icon">📷</div>
+                        <div class="info-content">
+                            <span class="info-label">Profile Picture</span>
+                        </div>
+
+                        <div class="info-avatar">
+                            <div class="info-user-icon"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">👤</div>
+                        <div class="info-content">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">XXXX XXX</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">🎂</div>
+                        <div class="info-content">
+                            <span class="info-label">Date Of Birth</span>
+                            <span class="info-value">XX-XX-XXXX</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">⚧</div>
+                        <div class="info-content">
+                            <span class="info-label">Gender</span>
+                            <span class="info-value">XXXX</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">XXXXX@XXXX.XXX</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <span class="info-label">Phone</span>
+                            <span class="info-value">0XX-XXXX XXX</span>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon">🏠</div>
+                        <div class="info-content">
+                            <span class="info-label">Address</span>
+                            <span class="info-value">XXX,XXX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-contains">
+                <h1>My Resume</h1>
+
+                <div class="resume-card">
+                    <div class="resume-file-icon">📄</div>
+                    <div class="resume-file-info">
+                        <span class="resume-filename">XXXX.pdf</span>
+                        <span class="resume-filemeta">Uploaded on May 5, 2026 • 1.2 MB</span>
+                    </div>
+                    <div class="resume-actions">
+                        <a href="#" class="resume-btn resume-btn-view" target="_blank">View</a>
+                        <a href="#" class="resume-btn resume-btn-update">Update</a>
+                    </div>
+                </div>
+
+                <div class="resume-skills">
+                    <div class="skills-header">
+                        <h2>Top Skills</h2>
+                        <button class="skill-edit-btn">✏️ Edit</button>
+                    </div>
+
+                    <div class="skill-tags">
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Figma Variables</span>
+                        <span class="skill-tag">Java & Python</span>
+                        <span class="skill-tag">Computer Networking</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>Connecting brilliant talents with top companies. Your journey to a dream job starts right here.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 19 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+
+        <script src="./js/login_status.js"></script>
+        <script src="./js/verify_login_register.js"></script>
+    </body>
+</html>
