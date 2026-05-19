@@ -1,0 +1,191 @@
+<!--
+Group RGB Vacancy
+Date: 05/05/2026
+Validated: 05/05/2026 Ok
+Description: DBI211 Group Assignment Feedback Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - Feedback </title>
+    </head>
+
+    <body class="page-feedback">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <article class="feedback-contains">
+            <form name="feedback" action="./thanks.html" method="get">
+                <fieldset class="feedback-information">
+                    <legend><h1>Personal Information</h1></legend>
+                    <table class="feedback-form-table">
+                        <tr>
+                            <td><label for="whoami">I am:</label></td>
+                            <td>
+                                <select id="whoami" name="UserType" class="feedback-form-table-input-1" required>
+                                    <option value="" disabled selected>Please select an option</option>
+                                    <option value="customer">RGB individuals customer / prospect</option>
+                                    <option value="HR">Company HR / Authorised Personnel</option>
+                                    <option value="Nothing">Prefers not to say</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="name">Name:</label></td>
+                            <td>
+                                <input type="text" id="name" name="Name" class="feedback-form-table-input-1" placeholder="Please Enter Your Name" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td>
+                                <input type="email" id="email" name="Email" class="feedback-form-table-input-1" placeholder="Please Enter Your Email" required>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <br>
+
+                <fieldset class="feedback-details">
+                    <legend><h2>Feedback Details</h2></legend>
+                    <table class="feedback-form-table">
+                        <tr>
+                            <td><label for="visit-date">Date of Visit:</label></td>
+                            <td>
+                                <input type="date" id="visit-date" name="VisitDate" class="feedback-form-table-input-1" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label>Overall Experience:</label></td>
+                            <td>
+                                <span class="feedback-rate">
+                                    <input type="radio" id="rate-excellent" name="Experience" value="Excellent" class="feedback-form-table-input-2" required>
+                                    <label for="rate-excellent">Excellent</label>
+                                </span>
+
+                                <span class="feedback-rate">
+                                    <input type="radio" id="rate-good" name="Experience" value="Good" class="feedback-form-table-input-2">
+                                    <label for="rate-good">Good</label>
+                                </span>
+
+                                <span class="feedback-rate">
+                                    <input type="radio" id="rate-poor" name="Experience" value="Poor" class="feedback-form-table-input-2">
+                                    <label for="rate-poor">Poor</label>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="comments">Comments:</label></td>
+                            <td>
+                                <textarea id="comments" name="Comments" rows="5" cols="40" class="feedback-form-table-input-1" placeholder="Please share your thoughts with us..." required></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="feedback-submit-area">
+                    <button type="submit" class="feedback-submit-btn">Submit Feedback</button>
+                    <button type="reset" class="feedback-reset-btn">Clear</button>
+                </div>
+
+            </form>
+        </article>
+    
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>Connecting brilliant talents with top companies. Your journey to a dream job starts right here.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 19 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+
+        <script src="./js/login_status.js"></script>
+    </body>
+</html>
