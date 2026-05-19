@@ -121,14 +121,26 @@ img
 .page-job .nav-job,
 .page-feedback .nav-feedback,
 .page-compass .nav-compass
+/*For Active Navigation*/
+.page-home .nav-home:hover,
+.page-job .nav-job:hover,
+.page-feedback .nav-feedback:hover,
+.page-compass .nav-compass:hover
 {
-    color: white;
+    color: white !important;
     font-size: larger;
     font-weight: bold;
     border: 1px solid #4a26ff;
     background-color: #4a26ff;
     border-radius: 10px;
     padding: 5px 10px;
+}
+
+.page-home .nav-home:hover,
+.page-job .nav-job:hover,
+.page-feedback .nav-feedback:hover,
+.page-compass .nav-compass:hover {
+    opacity: 0.8;
 }
 
 /*
