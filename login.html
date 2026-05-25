@@ -1,0 +1,149 @@
+<!--
+Group RGB Vacancy
+Date: 30/04/2026
+Validated: 19/05/2026 Ok
+Description: DBI211 Group Assignment Login Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - Login </title>
+    </head>
+
+    <body class="page-login">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+
+        <article class="login-contains">
+            <div class="left-login">
+                <img src="./images/background/login.jpeg" alt="Login background">
+            </div>
+
+            <div class="right-login">
+                <div class="login-employee">
+                    <p>
+                        Employee?<span><a href="#">Click Here</a></span>
+                    </p>
+                </div>
+                <div class="login-card">
+                    <h1>Log in to RGB Vacancy</h1>
+                    <form name="login">
+                        <div class="input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Please Enter Your Email">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Please Enter Your Password" maxlength="18">
+                        </div>
+
+                        <div class="forget-password">
+                            <a href="#">Forgotten Password?</a>
+                        </div>
+
+                        <button type="submit" class="login-btn-login">Log in</button>
+                    </form>
+                    <div class="goto-register">
+                        <p>Haven't an Account?</p>
+                        <a href="register.html">Create new account</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>RGB Vacancy is a fast-growing online job platform dedicated to bridging the gap between ambitious job seekers and trusted employers. We curate high-quality, relevant career opportunities while empowering companies to efficiently source top-tier talent. As we expand, RGB Vacancy remains committed to cultivating a reliable, scalable marketplace that champions long-term career growth and fosters a dynamic, inclusive employment ecosystem.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 19 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+        
+        <script src="./js/verify_login_register.js"></script>
+        <script src="./js/login_status.js"></script>
+    </body>
+</html>

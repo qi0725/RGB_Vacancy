@@ -1,0 +1,181 @@
+<!--
+Group RGB Vacancy
+Date: 19/05/2026
+Validated: 19/05/2026 Ok
+Description: DBI211 Group Assignment Career Compass Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="RGB Vacancy Group">
+
+        <link href="./style.css" type="text/css" rel="stylesheet">
+
+        <title>RGB Vacancy - Career Compass</title>
+    </head>
+
+    <body class="page-compass">
+        <header class="header-contains">
+            <div class="logo-area">
+                <a href="index.html">
+                    <img src="./images/Logo/RGB_LOGO.png" alt="RGB Vacancy Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" class="nav-home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="job.html" class="nav-job">Find a Job</a>
+                    </li>
+                    
+                    <li>
+                        <a href="feedback.html" class="nav-feedback">Feedback</a>
+                    </li>
+
+                    <li>
+                        <a href="compass.html" class="nav-compass">Career Compass</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="authorize-container">
+                <div class="guest-view">
+                    <a href="login.html" class="header-btn-login">Sign In</a>
+                </div>
+
+                <div class="user-view">
+                    <span class="user-wel-text">Hi, User</span>
+                    <a class="user-container" href="user.html" title="Personal">
+                        <div class="user-icon"></div>
+                    </a>
+
+                    <button class="header-btn-logout" onclick="changeloginstatus()">
+                        Log Out
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <article class="community-contains">
+            <aside class="community-sidebar">
+                <ul class="community-sidebar-menu">
+                    <li class="active">
+                        <a href="#">⭐ Featured threads</a>
+                    </li>
+
+                    <li>
+                        <a href="#">🧭 Explore all groups</a>
+                    </li>
+                </ul>
+
+                <a href="#" class="create-thread-btn">➕ Create thread</a>
+
+                <ul class="community-sidebar-menu">
+                    <li>
+                        <a href="#">👥 My groups</a>
+                    </li>
+
+                    <li>
+                        <a href="#">🔥 Top Malaysia Groups</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <div class="community-main">
+                <div class="community-search">
+                    <h1>Join Malaysia career community</h1>
+                    <p>Share career tips and exchange stories with jobseekers</p>
+
+                    <form action="#" class="community-search-form">
+                        <input type="search" name="searchQuery" placeholder="🔍 Search threads..." required>
+                        <button type="submit" class="community-search-btn">Search</button>
+                    </form>
+                </div>
+
+                <a href="#" class="thread-item">
+                    <div class="avatar letter-r">R</div>
+
+                    <div class="thread-details">
+                        <div class="thread-meta">
+                            <span class="author-name">RayTechRunner</span> • <span class="post-time">2h ago</span>
+                            <span class="group-tag">Tech Career Malaysia</span>
+                        </div>
+                        <h2 class="thread-title">Is it too late to pivot to IT at 26 in Malaysia? Need honest advice.</h2>
+                        <p class="thread-snippet">Hi guys, background i dalam sales & marketing, tapi recently rasa burnt out gila and economy sekarang pun we all know lah... I am thinking of learning UI/UX design or programming (Java/Python). Tapi i risau tak boleh compete dengan fresh grads yang ada proper Computer Science degree. Area Kuching/KL banyak ke vacancy untuk self-taught career switchers? 😭</p>
+                        <div class="thread-actions">
+                            <span>💬 42 Comments</span>
+                            <span>❤️ 118 Likes</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="thread-item">
+                    <div class="avatar letter-k">K</div>
+                    
+                    <div class="thread-details">
+                        <div class="thread-meta">
+                            <span class="author-name">KopiPengKaw</span> • <span class="post-time">1d ago</span>
+                            <span class="group-tag">Interview Secrets</span>
+                        </div>
+                        <h2 class="thread-title">Interviewer cakap "We are a family here", red flag atau tak? 🚩</h2>
+                        <p class="thread-snippet">Went to a job interview yesterday around Plaza Merdeka area. Everything went well, tapi bila i tanya pasal OT pay, HR tu senyum pastu cakap "We don't really count OT here because we work as a family, everyone helps each other." Auto rasa macam nak cabut lari on the spot. Siapa pernah terkena macam ni? Share sikit korang punya interview red flags.</p>
+                        <div class="thread-actions">
+                            <span>💬 156 Comments</span>
+                            <span>❤️ 512 Likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer class="footer-contains">
+            <table class="footer-table">
+                <thead>
+                    <tr>
+                        <th>RGB Vacancy</th>
+                        <th>Quick Links</th>
+                        <th>Contact Us</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="footer-description">
+                            <p>RGB Vacancy is a fast-growing online job platform dedicated to bridging the gap between ambitious job seekers and trusted employers. We curate high-quality, relevant career opportunities while empowering companies to efficiently source top-tier talent. As we expand, RGB Vacancy remains committed to cultivating a reliable, scalable marketplace that champions long-term career growth and fosters a dynamic, inclusive employment ecosystem.</p>
+                        </td>
+                        <td class="footer-links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="job.html">Find a Job</a></li>
+                                <li><a href="compass.html">Career Compass</a></li>
+                                <li><a href="feedback.html">Feedback</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </td>
+                        <td class="footer-contact">
+                            <p>Email Us: <span><a href="mailto:#">Click Here</a></span></p>
+                            <p>Location: Kuching, Sarawak</p>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="footer-bottom-cell">
+                            &copy; <a href="about.html" class="group-link">RGB Vacancy</a> | Last updated: 19 May, 2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </footer>
+
+        <script src="./js/login_status.js"></script>
+    </body>
+</html>
